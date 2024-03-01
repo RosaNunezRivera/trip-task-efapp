@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadData();
+    })
+
+    function loadData() {
+        $.ajax({
+            url: "/Trip/GetTrips",
+            type: "GET",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (response) {
+                var html = '';
+                $.each(response, function (key, item) {
+                    html += '<tr>'
+                    html += '<td>' + item.Destination + '</td>';
+                    html += '<td>' + item.Description + '</td>';
+                    html += '<td>' + new Date(parseInt(item.StartDate.substr(6))).toLocaleDateString() + '</td>';
+                    html += '<td>' + new Date(parseInt(item.EndDate.substr(6))).toLocaleDateString() + '</td>';
+                    html += '<td><a href="#" onclick=Delete(' + item.TripId + ')>Delete Trip</td>';
+                    html += '</tr>'
+                });
+                $('.tbody').html(html);
+            },
+            error: function (errormessage) {
+                alert(errormessage.responseText);
+            }
+        })
+    }
+    function Delete(tripId) {
+        var ans = confirm('Are you sure you want to delete this trip?');
+
+        if (ans) {
+            $.ajax({
+                url: "/Trip/DeleteTrip/",
+                data: JSON.stringify({ tripId: tripId }),
+                type: "POST",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    loadData();
+                },
+                error: function (errormessage) {
+                    alert(errormessage, responseText);
+                }
+            });
+        }
+    }
+
+</script>
+
+<center> <h2>My Upcoming Trips</h2> </center>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td>Destination</td>
+            <td>Description</td>
+            <td>Trip Start Date</td>
+            <td>Trip End Date</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody class="tbody">
+        @*Trip records will be populated here*@
+    </tbody>
+</table>
+

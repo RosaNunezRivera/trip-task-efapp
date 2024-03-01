@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripTaskEFApp", "TripTaskEFApp.csproj", "{F27E0F7E-0639-4C8C-A07F-4002FEB1C07E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPDAL", "IPDAL\IPDAL.csproj", "{61187FAF-1D44-4095-8663-C28F763706D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPBLL", "IPBLL\IPBLL.csproj", "{199790F2-D33E-427A-B296-7C5BE6FB67FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F27E0F7E-0639-4C8C-A07F-4002FEB1C07E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27E0F7E-0639-4C8C-A07F-4002FEB1C07E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27E0F7E-0639-4C8C-A07F-4002FEB1C07E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27E0F7E-0639-4C8C-A07F-4002FEB1C07E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61187FAF-1D44-4095-8663-C28F763706D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61187FAF-1D44-4095-8663-C28F763706D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61187FAF-1D44-4095-8663-C28F763706D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61187FAF-1D44-4095-8663-C28F763706D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199790F2-D33E-427A-B296-7C5BE6FB67FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199790F2-D33E-427A-B296-7C5BE6FB67FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199790F2-D33E-427A-B296-7C5BE6FB67FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199790F2-D33E-427A-B296-7C5BE6FB67FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9B162A3-76E6-478F-AB0C-71F9B3A44EF6}
+	EndGlobalSection
+EndGlobal
